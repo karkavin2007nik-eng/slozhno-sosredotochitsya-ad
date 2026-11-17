@@ -2,3 +2,44 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  /* Цвета. Основная тема — тёмная («Неон») */
+  --bg-color: #000028;
+  --text-color: #ffffff;
+  --accent-color: #ff0070;
+  --heading-color: #d500f9;
+  --decor-text-color: #000028;
+  --section-title-color: #ff0070;
+  --page-bg-image: url('../images/cover-image-dark.png');
+  --rec-display: block;
+
+  /* Типографика */
+  --font-family: 'IBM Plex Mono', monospace;
+  --font-size-text: 1.125rem;
+  --font-size-small: 0.875rem;
+  --line-height-text: 1.2;
+  --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+
+  /* Размеры и отступы */
+  --page-padding: 1rem;
+  --section-gap: 2.5rem;
+  --card-gap: 1.5rem;
+  --min-screen-block-size: 37.5rem;
+  --corner-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --page-padding: 1.25rem;
+    --section-gap: 3.75rem;
+    --card-gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-gap: 5rem;
+  }
+}
